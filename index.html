@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <title>Portfolio of Al Jaber Nishad</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <section id="navbar-section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <a class="navbar-brand" href="#">Al Jaber Nishad</a>
+          <div class="custom-toggler">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon">
+                <i
+                  class="fas fa-stream"
+                  style="color: #fff; font-size: 28px"
+                ></i>
+              </span>
+            </button>
+          </div>
+          <div class="nav-bg collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a target="_blank" class="nav-link" href="{{ about.resume.url }}">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Header Section -->
+
+    <section id="header">
+      <div class="container">
+        <div class="row h-100">
+          <div class="col-sm-12 my-auto">
+            <p class="header-top">Hi, my name is</p>
+            <p class="header-name">Al Jaber Nishad</p>
+            <p class="header-subTitle">I build things for the web</p>
+            <p class="header-description">{{ title.titleDescription }}</p>
+            <a href="{{ about.resume.url }}" target="blank">
+              <button class="btn button">Resume</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section  -->
+    <section id="about">
+      <div class="container">
+        <div class="about-section">
+          <div class="section-title">About Me</div>
+          <div class="row">
+            <div
+              class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center"
+            >
+              <div class="about-description">{{ about.aboutDescription }}</div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="pro-image">
+                <img
+                  class="img-fluid"
+                  src="{{ about.profilePicture.url}}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="skills-section">
+          <div class="section-title">Skills</div>
+          {% for item in category %}
+          <p>
+            {{item.name}}: {% for val in item.skills_set.all %}
+            <span>{{val.skill}}</span>
+            {% endfor %}
+          </p>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experience">
+      <div class="container">
+        <div class="experience-section">
+          <div class="section-title">Experiences</div>
+
+          <div class="text-white">
+            <h4>Junior Software Engineer</h4>
+            <h5>BlueBay IT Limited</h5>
+            <h6>April 2023 - Now</h6>
+            <ul>
+              <li>
+                Utilized Django REST Framework, Swagger, and Post‐man to Develop and Test APIs.
+              </li>
+              <li>
+                Employed Python Scripting for Efficient Data Insertion.
+              </li>
+              <li>
+                Maintain and design the system workflow of different software. Example: Website: <a href="https://soft.baira.org.bd">soft.baira.org.bd</a> admin: <a href="https://admin.baira.org.bd">admin.baira.org.bd</a> and <a href="https://cashconnect.com.bd">cashconnect.com.bd</a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-white">
+            <h4>Software Engineer</h4>
+            <h5>XYHopper</h5>
+            <h6>October 2022 - January 2023</h6>
+            <ul>
+              <li>Worked on two LMS websites build on WordPress.</li>
+              <li>
+                TWPLMS theme has been used in both websites. Sites are:
+                <a target="_blank" href="\href{http://junoed.co.uk/">JunoEdX</a> and
+                <a target="_blank" href="http://upskillcamp.co.uk/">UPSKILL Camp</a>
+              </li>
+              <li>
+                I was responsible to design and develop both of the websites.
+              </li>
+            </ul>
+          </div>
+          <div class="text-white">
+            <h4>Software Engineer Intern</h4>
+            <h5>BracNet Limited</h5>
+            <h6>April 2022 - September 2022</h6>
+            <ul>
+              <li>
+                Worked on an IoT project and built a web app using Django for
+                the project. Used Paho‐MQTT library for subscribing and fetching
+                data from the sensor through MQTT broker.
+              </li>
+              <li>
+                MySQL is used as the database for storing all the data. Ajax and
+                Chart.js has been used for live updating chart of parameters.
+              </li>
+              <li>
+                Dockerized the application and hosted it in the office’s VPS
+                using the apache2 web server.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification">
+      <div class="container">
+        <div class="certification-section">
+          <div class="section-title">Certifications</div>
+
+          <div class="text-white">
+            <h4>DevOps Pre-Requisite Course</h4>
+            <h5>KodeKloud</h5>
+            <h6>Issued Sep 2022</h6>
+            <h6>Certificate ID: <a target="_blank" href="https://kodekloud.com/certificate-verification/7F1134960D-7F0B2F23E5-7F05A43AE5/">7F1134960D-7F0B2F23E5-7F05A43AE5</a></h6>
+          </div> <br>
+
+          <div class="text-white">
+            <h4>Docker Training Course for the Absolute Beginner</h4>
+            <h5>KodeKloud</h5>
+            <h6>Issued July 2022</h6>
+            <h6>Certificate ID: <a target="_blank" href="https://kodekloud.com/certificate-verification/7F1134960D-7F0B300F11-7F05A43AE5/">7F1134960D-7F0B300F11-7F05A43AE5</a></h6>
+          </div><br>
+
+          <div class="text-white">
+            <h4>Docker Essentials: A Developer Introduction</h4>
+            <h5>IBM</h5>
+            <h6>Issued Sep 2022</h6>
+            <h6>Certificate ID: <a target="_blank" href="https://courses.cognitiveclass.ai/certificates/4ee961fc111846bc9bdf3779f6225247">4ee961fc111846bc9bdf3779f6225247</a></h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="projects-section">
+          <div class="section-title">Things I've Built</div>
+
+          {% for project in projects %}
+
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="project-image pt-3">
+                <img
+                  class="img-fluid border border-light"
+                  src="{{ project.projectImage.url }}"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="project-content">
+                <div class="project-title">{{ project.projectTitle }}</div>
+                <div class="project-description">{{ project.projectDes}}</div>
+                <div class="tools">
+                  {% for tool in project.splitTools %}
+                  <span>{{ tool }}</span>
+                  {% endfor %}
+                </div>
+                <div class="project-link">
+                  {% if project.gitLink %}
+                  <a target="_blank" 
+                    data-toggle="tooltip"
+                    title="Github Link"
+                    href="{{ project.gitLink }}"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  {% endif %} {% if project.liveLink %}
+                  <a target="_blank" 
+                    data-toggle="tooltip"
+                    title="Live Link"
+                    href="{{ project.liveLink }}"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-section">
+          <div class="contact-title">Get In Touch</div>
+          <div class="contact-description">
+            Thank you for taking the time to explore my portfolio. If you have any inquiries, collaborations, or simply want to connect, I'd love to hear from you. Your feedback and ideas are invaluable to me, and I am always excited to explore new opportunities.
+          </div>
+          <div class="contact-btn">
+            <a href="mailto:{{ social.mail }}">
+              <button class="btn button">Say Hello</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="footer-section">
+        <div class="footer-icon">
+          <a
+            data-toggle="tooltip"
+            title="Email"
+            href="mailto:{{ social.mail }}"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a target="_blank"  data-toggle="tooltip" title="Github" href="{{ social.git }}">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank"  data-toggle="tooltip" title="Dev.To" href="{{ social.leetCode }}">
+            <i class="fas fa-laptop-code"></i>
+          </a>
+          <a target="_blank" 
+            data-toggle="tooltip"
+            title="LinkedIn"
+            href="{{ social.linkedIN }}"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="footer-text">
+          <b>Developed by Al Jaber Nishad</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
