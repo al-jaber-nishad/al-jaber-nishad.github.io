@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body{
+  font-family: 'Merriweather', serif;
+  background-color: #0A192F;
+  color: #f0f8ff9a;
+  /* max-width: 1300px; */
+}
+a{
+  color: #49e090;
+  font-weight: 600;
+}
+a:hover{
+  color: #49e090;
+  text-decoration: underline;
+}
+section{
+  padding: 50px 0;
+}
+.button{
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid #49e090;
+  background-color: #0A192F;
+  color: #e4e4e4;
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+.button:hover{
+  background-color: #49e090;
+  color: #0A192F;
+}
+.section-title{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #e4e4e4;
+  font-weight: 600;
+  font-family: 'Lato';
+}
+.section-title::after{
+  content: "";
+  height: 1px;
+  width: 15vw;
+  background-color: #49e090;
+  display: inline-block;
+  margin-left: 20px;
+  transform: translateY(-10px);
+}
+
+ /* Navbar Section */
+ #navbar-section{
+   /* background-color: #15233a; */
+}
+.navbar{
+  padding: 20px 50px ;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.navbar .navbar-brand{
+  color: #79e6ab;
+  font-weight: 600;
+}
+.nav-bg li{
+  background-color: #15233a;
+}
+.nav-bg{
+  background-color: #15233a;
+}
+.navbar-toggler{
+  background-color: #15233a;
+}
+.navbar-toggler:focus{
+  border: none;
+  outline: 2px dashed #49e090;
+}
+.nav-item .nav-link{
+  text-align: center;
+}
+.nav-item .nav-link{
+  text-decoration: none;
+  color:#e4e4e4;
+}
+.nav-item .nav-link:hover{
+  color: #49e090;
+}
+#navbarNavDropdown li a:focus{
+  color: #79e6ab;
+}
+
+ /* Header Section  */
+#header{
+  background-image: url(assets/images/al-jaber-nishad.jpg);
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
+}
+.header-top{
+  font-size: 15px;
+  line-height: 17px;
+  color: #49e090;
+}
+.header-name{
+  font-size: 75px;
+  line-height: 84px;
+  font-family: 'Lato', sans-serif;
+  color: #e4e4e4;
+}
+.header-subTitle{
+  font-size: 75px;
+  line-height: 60px;
+  font-family: 'Lato', sans-serif;
+  color: #f8f8f880;
+}
+.header-description{
+  padding-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f0f8ff9a;
+  max-width: 1000px;
+}
+
+/* About Section   */
+.about-section .row .pro-image img{
+  text-align: center;
+  max-width: 100%;
+  padding: 10px 50px;
+  border-radius: 15%;
+}
+
+/* Skills Section */
+.skills-section p{
+  margin: 5px 0;
+  max-width: 800px;
+}
+.skills-section p span{
+  color: #e4e4e4;
+  text-transform: uppercase;
+}
+
+ /* Projects Section  */
+#projects .project-title{
+  font-family: 'Lato';
+  font-size: 30px;
+  font-weight: 500;
+  color: #e4e4e4;
+  margin-bottom: 5px;
+}
+#projects .project-image{
+  padding-bottom: 30px;
+}
+#projects .project-content{
+  padding-bottom: 30px;
+}
+.project-section .row{
+  margin-bottom: 30px 0;
+}
+.project-description{
+  background-color: #15233a;
+  padding: 15px;
+  border-radius: 5px;
+}
+.tools{
+  margin-top: 5px;
+}
+.tools span{
+  border: .5px solid #49e090;
+  padding: 2px 5px;
+  margin: 5px 2px;
+  border-radius: 3px;
+  display: inline-block;
+  /* margin: 10px 2px; */
+}
+.project-link a{
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #49e090;
+}
+.fa-github:hover, .fa-external-link-alt:hover, .fa-envelope:hover, .fa-dev:hover, .fa-linkedin:hover, .fa-laptop-code:hover {
+  color: #49e090;
+  text-decoration: none;
+}
+
+ /* Contact Section  */
+#contact{
+  text-align: center;
+  padding: 100px 0;
+}
+#contact .contact-title{
+  font-family: "Lato";
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #e4e4e4;
+}
+#contact .contact-description{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+ /* Footer Section  */
+.footer-section{
+  text-align: center;
+}
+.footer-section b{
+  margin-bottom: 20px;
+}
+.footer-section b:hover{
+  color: #49e090;
+}
+.footer-section .footer-icon{
+  margin-bottom: 20px;
+}
+.footer-section a{
+  font-size: 40px;
+  margin: 0 15px;
+}
+
+
+
+ /* Media Queries */
+@media (max-width: 768px){
+  .navbar-brand{
+    font-size: 20px;
+  }
+  .header-top{
+    font-size: 10px;
+  }
+  .header-name{
+    font-size: 50px;
+    line-height: 45px;
+  }
+  .header-subTitle{
+    font-size: 50px;
+    line-height: 45px;
+  }
+  .header-description{
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+}
+
+
+
+/* Experience Section */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,100italic,300italic,400italic,700,700italic|Roboto+Slab:400,100,300,700);
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.CV-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2em;
+  color: #222222;
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+}
+
+@media all and (max-width: 500px) {
+  .CV-page {
+    padding: 0 1em;
+  }
+}
+/* if IE<=7 */
+
+.CV-page\ {
+  width: 1100px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.CV-secondaryHeading {
+  position: relative;
+  margin: 2em 0 0;
+  text-transform: uppercase;
+}
+/* Grid
+****************************************************/
+
+.CV-grid {
+  display: table;
+}
+
+.CV-grid-column {
+  display: table-cell;
+}
+
+.CV-timeline {
+  position: relative;
+  margin: 0 0 0 0.5em;
+  padding-left: 1.5em;
+  border-left: solid 1px #222222;
+}
+
+.CV-timeline:first-of-type {
+  margin-top: 1em;
+}
+
+.CV-timeline:last-of-type {
+  border-left-color: transparent;
+}
+
+.CV-timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: solid 1px #222222;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.CV-timeline-heading {
+  margin: 0;
+  padding-bottom: 0.5em;
+  line-height: 1em;
+  font-weight: normal;
+  -webkit-transform: translateY(-0.1em);
+  -ms-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
+}
+
+.CV-timeline-heading-title {
+  line-height: 1;
+  color: #00aef0;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.CV-timeline-heading-location {
+  font-size: 0.9em;
+}
+
+.CV-timeline-heading-duration {
+  display: block;
+  font-size: 0.8em;
+  color: #6f6f6f;
+}
+
+.CV-timeline-details {
+  display: block;
+  margin: 0;
+  padding-bottom: 2em;
+  padding: 0 0 2em 1em;
+  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
+}
+
+.CV-timeline-details-item {
+  margin-bottom: 0.5em;
+}
